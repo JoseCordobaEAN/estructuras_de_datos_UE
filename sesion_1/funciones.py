@@ -37,3 +37,6 @@ def es_vocal(letra):
     """
     return 1 == len(letra) and letra in 'aeiouAEIOU'
 
+
+def contar_vocales(frase):
+    pass
