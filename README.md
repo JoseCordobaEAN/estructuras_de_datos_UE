@@ -1,4 +1,4 @@
-# estructuras_de_datos_UE
+# Estructuras de datos UE Tercera Promoxión
 En este repositorio incluiremos los ejercicios trabajados en la clase
 
 - En la sesión 1 recordamos como funciona el lenguaje python
