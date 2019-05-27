@@ -17,8 +17,9 @@ class TestSumatoria(TestCase):
         espero = 5000000050000000
         realmente = sumatoria(dado)
         despues = datetime.now()
-        print(f'el algoritmo terminó {despues}')
-        self.assertEquals(espero, realmente)
+        duracion = despues - ahora
+        print(f'el algoritmo terminó {despues} la duración fue de {duracion}')
+        self.assertEqual(espero, realmente)
 
 
     # def test_sumatoria(self):
