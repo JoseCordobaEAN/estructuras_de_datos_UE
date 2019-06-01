@@ -42,6 +42,12 @@ def busqueda_binaria(lista, elemento):
         return mitad
     elif elemento < lista[mitad]:
         return busqueda_binaria(lista[:mitad], elemento)
+    elif elemento > lista[mitad] and len(lista) == 1:
+        raise ValueError(f'{elemento} no está en la lista')
     return mitad + busqueda_binaria(lista[mitad:], elemento)
+
+
+def suma_elementos(lista):
+    pass
 
 

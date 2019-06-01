@@ -38,3 +38,9 @@ class TestBusqueda_binaria(TestCase):
         elemento_dado = -50
         espero = ValueError
         self.assertRaises(espero, busqueda_binaria, lista_dada, elemento_dado)
+
+        # Probar caso excepcional
+        lista_dada = [1, 2, 8, 20, 25, 50, 500]
+        elemento_dado = 1050
+        espero = ValueError
+        self.assertRaises(espero, busqueda_binaria, lista_dada, elemento_dado)
