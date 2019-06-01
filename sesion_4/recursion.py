@@ -42,5 +42,6 @@ def busqueda_binaria(lista, elemento):
         return mitad
     elif elemento < lista[mitad]:
         return busqueda_binaria(lista[:mitad], elemento)
-    else:
-        return mitad + busqueda_binaria(lista[mitad:], elemento)
+    return mitad + busqueda_binaria(lista[mitad:], elemento)
+
+
