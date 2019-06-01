@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/sesion_1" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/sesion_3" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/sesion_4" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.6 (estructuras_de_datos)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
