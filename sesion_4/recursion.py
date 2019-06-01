@@ -48,6 +48,15 @@ def busqueda_binaria(lista, elemento):
 
 
 def suma_elementos(lista):
-    pass
+    """
+    Suma todos los elementos de una lista
 
+    >>> suma_elementos([1, 20, 11])
+    32
 
+    :param lista:
+    :return:
+    """
+    if len(lista) == 0:
+        return 0
+    return lista[0] + suma_elementos(lista[1:])

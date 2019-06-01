@@ -12,8 +12,8 @@ class TestSuma_elementos(TestCase):
         self.assertEqual(espero, real)
 
         # Caso estandar
-        dado = [1, 2, 3, 4] * 10000
-        espero = 100000
+        dado = [1, 2, 3, 4] * 100
+        espero = 1000
         real = suma_elementos(dado)
         self.assertEqual(espero, real)
 
