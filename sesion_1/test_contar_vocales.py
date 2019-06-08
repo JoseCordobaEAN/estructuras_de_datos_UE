@@ -8,28 +8,28 @@ class TestContar_vocales(TestCase):
         espero = 4
         realmente = contar_vocales(dado)
         print(f'contando vocales en {dado}, esperamos {espero}')
-        self.assertEquals(espero, realmente)
+        self.assertEqual(espero, realmente)
 
         dado = 'qwqwrtpppñlk'
         espero = 0
         realmente = contar_vocales(dado)
         print(f'contando vocales en {dado}, esperamos {espero}')
-        self.assertEquals(espero, realmente)
+        self.assertEqual(espero, realmente)
 
         dado = '!"$#"!"!$"%'
         espero = 0
         realmente = contar_vocales(dado)
         print(f'contando vocales en {dado}, esperamos {espero}')
-        self.assertEquals(espero, realmente)
+        self.assertEqual(espero, realmente)
 
         dado = ''
         espero = 0
         realmente = contar_vocales(dado)
         print(f'contando vocales en {dado}, esperamos {espero}')
-        self.assertEquals(espero, realmente)
+        self.assertEqual(espero, realmente)
 
         dado = 'aeiiioiiooiaaeuu'
         espero = 16
         realmente = contar_vocales(dado)
         print(f'contando vocales en {dado}, esperamos {espero}')
-        self.assertEquals(espero, realmente)
+        self.assertEqual(espero, realmente)

@@ -39,4 +39,8 @@ def es_vocal(letra):
 
 
 def contar_vocales(frase):
-    pass
+    resultado = 0
+    for letra in frase:
+        if es_vocal(letra):
+            resultado+=1
+    return resultado
