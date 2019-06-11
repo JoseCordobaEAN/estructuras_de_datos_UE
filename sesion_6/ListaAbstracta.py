@@ -1,6 +1,4 @@
-from enum import Enum
-
-class ListaAbstracta(Enum):
+class ListaAbstracta:
 
     size = 0
 

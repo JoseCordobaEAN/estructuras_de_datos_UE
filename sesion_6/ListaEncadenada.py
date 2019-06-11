@@ -1,22 +1,28 @@
 from ListaAbstracta import ListaAbstracta
+from Nodo import Nodo
 
 class ListaEncadenada(ListaAbstracta):
 
-    class Nodo:
-
-        elemento = None
-        siguiente = None
-
-        def __init__(self, elemento = None, nodo = None):
-            self.elemento = elemento
-            self.siguiente = nodo
-
+    def __init__(self):
+        """
+        Crea una nueva lista
+        """
+        self.cabeza = None
+        self.size = 0
 
     def es_vacia(self):
-        super().es_vacia()
+        """
+        Decide si la lista es vacía
+        :return: True si la lista es vacía, False de lo contrario
+        """
+        return self.size == 0
 
     def primero(self):
-        super().primero()
+        """
+        Retorna el primer elemento de la lista
+        :return:
+        """
+        return self.cabeza.elemento
 
     def ultimo(self):
         super().ultimo()
@@ -25,7 +31,12 @@ class ListaEncadenada(ListaAbstracta):
         super().buscar(elemento_buscado)
 
     def agregar_al_inicio(self, elemento):
-        super().agregar_al_inicio(elemento)
+        nodo_auxiliar = Nodo()
+        nodo_auxiliar.elemento = elemento
+        nodo_auxiliar.siguiente = self.cabeza
+        self.cabeza = nodo_auxiliar
+        self.size += 1
+
 
     def agregar_al_final(self, elemento):
         super().agregar_al_final(elemento)
