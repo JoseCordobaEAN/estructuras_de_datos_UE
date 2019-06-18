@@ -9,6 +9,7 @@ class ListaEncadenada(ListaAbstracta):
         """
         self.cabeza = None
         self.size = 0
+        self.cola = None
 
     def es_vacia(self):
         """
@@ -25,10 +26,14 @@ class ListaEncadenada(ListaAbstracta):
         return self.cabeza.elemento
 
     def ultimo(self):
-        super().ultimo()
+        return self.cola.elemento
 
     def buscar(self, elemento_buscado):
-        super().buscar(elemento_buscado)
+        copia = self.cabeza
+        for i in range(self.size):
+            if elemento_buscado == copia.elemento:
+                return i
+        return -1
 
     def agregar_al_inicio(self, elemento):
         nodo_auxiliar = Nodo()
@@ -39,10 +44,32 @@ class ListaEncadenada(ListaAbstracta):
 
 
     def agregar_al_final(self, elemento):
-        super().agregar_al_final(elemento)
+        nuevo = Nodo(elemento)
+        if self.size == 0:
+            self.cabeza = nuevo
+            self.cola = nuevo
+        else:
+            self.cola.siguiente = nuevo
+            self.cola = nuevo
+        self.size += 1
 
     def remover_primero(self):
-        super().remover_primero()
+        if not self.es_vacia():
+            nuevo = self.cabeza.siguiente
+            self.cabeza = nuevo
+            if self.size == 1:
+                self.cola = nuevo
+            self.size -=1
+
+
 
     def remover_ultimo(self):
-        super().remover_ultimo()
+        auxiliar = self.cabeza
+        penultimo = None
+        while auxiliar:
+            penultimo = auxiliar
+            auxiliar = auxiliar.siguiente
+        if self.size > 0:
+            penultimo.siguiente = None
+            self.size -= 1
+        self.cola == penultimo
